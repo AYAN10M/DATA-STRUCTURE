@@ -1,0 +1,2 @@
+Stack is a linear data structure which can be implemented either using an array or a linked list. The elements in a stack are added and removed only form the one end, which is called "top". Hence it is called a LIFO (Last-In -First-Out) data structure, as the element that was inserted last is taken out at first.
+Example: Pile of Plate
