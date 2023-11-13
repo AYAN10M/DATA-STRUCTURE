@@ -133,11 +133,27 @@ void delete(int position)
         else
         {
             temp1 = temp2->next;   // Hold the node to be deleted
-            temp3 = temp1->next;   // Hold the next node
+            temp3 = temp1->next;                   // Hold the next node
             temp2->next = temp3;   // Link the current node to the next node
         }
         free(temp1);  // Free memory of the deleted node
     }
+}
+
+void reverse()
+{
+    struct node *current, *prev, *next;
+    current = head;
+    prev = NULL;
+
+    while (current != NULL)
+    {
+        next = current->next;  // Hold the next node
+        current->next = prev;  // Link the current node to the previous node
+        prev = current;        // Update the previous node
+        current = next;        // Update the current node
+    }
+    head = prev;  // Update head to point to the last node
 }
 
 // Main function

@@ -12,7 +12,7 @@ int main()
     int option, size;
     printf("Enter the size of the stack:\t");
     scanf("%d", &size);
-    int array[size]; // Define the stack array with the given size
+    int *array = (int*) malloc(size * sizeof(int)); // Define the stack array with the given size using dynamic memory allocation
     int top = -1;    // Initialize top to -1 to indicate an empty stack
 
     while (1)
@@ -43,6 +43,7 @@ int main()
         }
     }
 
+    free(array); // Free the dynamically allocated memory
     return 0;
 }
 
