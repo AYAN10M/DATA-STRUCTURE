@@ -23,10 +23,10 @@ void main()
         switch (choice)
         {
             case 1:
-            insert();
+            enqueue();
             break;
             case 2:
-            delete();
+            dequeue();
             break;
             case 3:
             display();
@@ -39,7 +39,7 @@ void main()
     } 
 } 
  
-void insert()
+void enqueue()
 {
     int element;
     if (rear == CAPACITY - 1)
@@ -54,9 +54,9 @@ void insert()
         rear = rear + 1;
         queue_array[rear] = element;
     }
-} /* End of insert() */
+}
  
-void delete()
+void dequeue()
 {
     if (front == - 1 || front > rear)
     {
@@ -68,7 +68,7 @@ void delete()
         printf("Element deleted from queue is : %d\n", queue_array[front]);
         front = front + 1;
     }
-} /* End of delete() */
+}
  
 void display()
 {

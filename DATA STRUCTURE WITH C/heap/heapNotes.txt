@@ -1,0 +1,53 @@
+A binary heap is defined as a complete binary tree with elements at every node being either less than or equal to the element at its left and right child.
+
+or 
+
+A binary heap is a complete binary tree in which every node satisfies the heap property which
+states that:
+
+If B is a child of A, then key(A) ≥ key(B)
+
+
+This implies that elements at every node will be either greater than or equal to the element at
+its left and right child. Thus, the root node has the highest key value in the heap. Such a heap is
+commonly known as a max-heap.
+
+Alternatively, elements at every node will be either less than or equal to the element
+at its left and right child. Thus, the root has
+the lowest key value. Such a heap is called a min-heap.
+
+Since a heap is defined as a complete binary tree, all its element can be stored sequentially in array. If the element is position "i" in the array, then its left child is stored at position "2i" and its right child at position "2i+1". Conversely, an element at position "i" has its parent stored at position "i/2".
+
+*  Being a complete binary tree, all the levels of the tree except the last level are completely filled.
+*  The height of a binary tree is given as (log2n), where n is the number of elements.
+*  Heaps (also known as partially ordered trees) are a very popular data structure for implementing priority queues.
+
+
+Inserting a new element in a Binary Heap
+
+Consider a max heap H with n elements. Inserting a new value into the heap is done in the following two steps:
+
+1. Add the new value at the bottom of H in such a way that H is still a complete binary tree but not necessarily a heap.
+2. Let the new value rise to its appropriate place in H so that H now becomes a heap as well.
+
+To do this, compare the new value with its parent to check if they are in the correct order. If they are, then the procedure halts, else the new value and its parent’s value are swapped and Step 2 is repeated.
+
+Q) Build a max heap H from the given set of numbers: 45, 36, 54, 27,63, 72, 61, and 18. Also draw the memory representation of the heap.
+
+
+Deleting an Element from a Binary Heap
+
+
+Consider a max heap H having n elements. An element is always deleted from the root of the heap.Deleting an element from
+heap H is done in the following three steps:
+
+1. Replace the root node’s value with the last node’s value
+2. Delete the last node.
+3. Sink down the new root node’s value so that H satisfies the
+heap property. In this step, interchange the root node’s value
+with its child node’s value (whichever is largest among
+its children).
+
+Application of Binary Heaps:
+    ** For using heapsort algorithm
+    ** Implementing priority queues
