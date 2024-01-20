@@ -158,6 +158,5 @@ int main()
 
     printf("\nSum of the Polynomials: ");
     display(head3);
-
     return 0;
 }
