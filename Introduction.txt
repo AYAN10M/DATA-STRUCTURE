@@ -1,0 +1,7 @@
+What is Data Structure ?
+Data Structure is a way of organizing data in such a way that we can perform operations on the data in an effective way.
+
+Data structures are classified into two categories:
+a) linear [array, linked list]
+b) nonlinear [tree, graph]
+The elements in a linear data structure form a sequence, whereas elements in a nonlinear data structure do not.
