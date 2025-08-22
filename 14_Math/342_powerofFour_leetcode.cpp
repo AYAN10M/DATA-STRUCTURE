@@ -10,23 +10,37 @@ public:
         {
             return true;
         }
-
-        // Removing the odd no and negative number
-        if (n % 2 != 0 || n <= 0 || n == 2)
+        if (n <= 0 || n % 2 != 0)
         {
             return false;
         }
 
-        while (n % 4 == 0)
-        {
-            n = n / 4;
-        }
+        bitset<31> bin_num(n);
+        auto count = 0;
 
-        if (n == 1)
+        for (int i = 0; i < 31; i++)
         {
-            return true;
+            if (i % 2 != 0)
+            {
+                if (bin_num[i] == 1)
+                {
+                    count++;
+                }
+            }
+            if (count > 1)
+            {
+                return false;
+            }
         }
-
-        return false;
+        return true;
     }
 };
+
+/*
+
+1 is 4^0 => 00001
+4 is 4^1 => 00100
+16 is 4^2 => 10000
+64 is 4^3 => 1000000
+
+*/
