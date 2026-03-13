@@ -7,7 +7,6 @@ struct Node
     Node *left;
     Node *right;
 
-    // Defining the default constructor
     Node(int value)
     {
         data = value;
