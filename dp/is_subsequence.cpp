@@ -4,20 +4,34 @@ using namespace std;
 class Solution
 {
 public:
-    vector<vector<string>> findSubSeq(string s)
-    {
-        
-    }
-
     bool isSubsequence(string s, string t)
     {
+        int i = 0, j = 0;
+
         if (s.length() > t.length())
         {
-
+            return false;
         }
         else if (s.length() == t.length())
         {
-            if (s == t)
+            return s == t;
+        }
+        else
+        {
+            while (i < s.length() && j < t.length())
+            {
+                if (s[i] == t[j])
+                {
+                    i++;
+                    j++;
+                }
+                else
+                {
+                    j++;
+                }
+            }
+
+            if (i == s.length())
             {
                 return true;
             }
@@ -25,9 +39,6 @@ public:
             {
                 return false;
             }
-        }
-        else
-        {
         }
     }
 };
